@@ -1,0 +1,166 @@
+  858  git push
+  859  sudo apt-get update
+  860  pip install dvc
+  861  sudo apt install git
+  862  git config --global user.email "mkaivan29@mail.ru"
+  863  git config --global user.name "ivan"
+  864  mkdir repo && cd repo
+  865  cd ..
+  866  mkdir lab4 && cd lab4
+  867  git clone https://github.com/Vanmo4/MLOps_HW_2S.git
+  868  dvc --version
+  869  git rm MLOps_HW_2S
+  870  git config --global init.defaultBranch master
+  871  cd ..
+  872  git remote add origin https://github.com/Vanmo4/MLOps_HW_2S.git
+  873  dvc init
+  874  dvc remote add --default myremote gdrive://1J9wW-6-wP8y47SOxPhcq4Nvm3E8D9dCa
+  875  dvc remote modify myremote gdrive_acknowledge_abuse true
+  876  pip install dvc[gdrive]
+  877  git status
+  878  dvc remote list
+  879  dvc status
+  880  git add .dvc/config
+  881  cd MLOps_HW_2S
+  882  cd lab4
+  883  mkdir datasets
+  884  python3 -m pip install -r requirements.txt
+  885  nano requirements.txt
+  886  nano data_creation.py
+  887  nano data_modification1.py
+  888  python3 -m pip install -r requirements.txt
+  889  python3 data_creation.py
+  890  python3 data_modification1.py
+  891  dvc add datasets
+  892  git add .gitignore datasets.dvc
+  893  git add .
+  894  git commit -m "Modify dataset 1"
+  895  dvc push
+  896  git push origin master
+  897  git push origin testing
+  898  git push origin main
+  899  git push
+  900  git pull
+  901  git push origin testing
+  902  git pull
+  903  git config --global http.proxy
+  904  git config --global https.proxy
+  905  git pull
+  906  sudo git pull
+  907  git status
+  908  cd ..
+  909  cd lab3
+  910  git add uber-raw-data-sep14.csv.gz
+  911  cd ..
+  912  git init
+  913  cd MLOps_HW_2S
+  914  cd lab3
+  915  git add uber-raw-data-sep14.csv.gz
+  916  git status
+  917  git add .
+  918  git push
+  919  git pull
+  920  git status
+  921  git push
+  922  git pull
+  923  git status
+  924  cd ..
+  925  cd home
+  926  cd ivan
+  927  cd clone https://github.com/Vanmo4/MLOps_HW_2S.git
+  928  git clone https://github.com/Vanmo4/MLOps_HW_2S.git
+  929  git status
+  930  git add .
+  931  git commit -m 'updt files'
+  932  git push
+  933  git push --set-upstream origin main
+  934  git pull
+  935  git push --set-upstream origin main
+  936  git status
+  937  git add Software_Engineering
+  938  git add project
+  939  git commit -m 'updt'
+  940  git add .
+  941  git commit -m 'updt'
+  942  git push
+  943  git push --set-upstream origin main
+  944  git pull
+  945  git status
+  946  git rm Software_Engineering
+  947  cd MLOps_HW_2S
+  948  git rm Software_Engineering
+  949  cd lab3
+  950  git status
+  951  git add uber-raw-data-sep14.csv.gz
+  952  git commit -m 'add file'
+  953  git push
+  954  git status
+  955  cd ..
+  956  git status
+  957  mkdir lab4 && cd lab4
+  958  dvc remote list
+  959  dvc status
+  960  git add .dvc/config
+  961  cd ..
+  962  git add .dvc/config
+  963  cd ..
+  964  git add .dvc/config
+  965  cd MLOps_HW_2S/lab4
+  966  mkdir datasets
+  967  nano requirements.txt
+  968  python3 -m pip install -r requirements.txt
+  969  nano data_creation.py
+  970  nano data_modification1.py
+  971  python3 data_creation.py
+  972  python3 data_modification1.py
+  973  dvc add datasets
+  974  git add .gitignore datasets.dvc
+  975  git add .
+  976  git commit -m "Modify dataset 1"
+  977  dvc push
+  978  git push origin testing
+  979  git push origin main
+  980  nano data_modification2.py
+  981  python3 data_modification2.py
+  982  dvc add datasets
+  983  git add .
+  984  git commit -m "Modify dataset 2"
+  985  dvc push
+  986  git push origin main
+  987  nano data_modification3.py
+  988  python3 data_modification3.py
+  989  dvc add datasets
+  990  git add .
+  991  git commit -m "Modify dataset 3"
+  992  dvc push
+  993  git push origin main
+  994  git log --oneline
+  995  git checkout HEAD^1
+  996  git checkout c1fa53b
+  997  git log --oneline
+  998  dvc pull
+  999  git checkout d2c887a
+ 1000  git checkout HEAD^1
+ 1001  git log --oneline
+ 1002  git checkout HEAD^2
+ 1003  git checkout HEAD^1
+ 1004  git log --oneline
+ 1005  git checkout 442fded
+ 1006  dvc run -f catboost_dev/.dvc -d requirements.txt -d data_creation.py d datasets/data.csv exit
+ 1007  dvc run -f catboost_dev/.dvc -d requirements.txt -d data_creation.py -d datasets/data.csv -d data_modification1.py -d datasets/data_mod1.csv -d data_modification2.py -d datasets/data_mod2.csv -d data_modification3.py -d datasets/data_mod3
+ 1008  dvc run
+ 1009  python3 -m pip install -r requirements.txt
+ 1010  ls -la
+ 1011  rm -rf datasets
+ 1012  ls -la
+ 1013  dvc pull
+ 1014  cat datasets/data.csv
+ 1015  git log --oneline
+ 1016  git checkout HEAD^1
+ 1017  git log --oneline
+ 1018  dvc pull
+ 1019  head datasets/data.csv
+ 1020  ls
+ 1021  uname -r | tee logfile.txt
+ 1022  history
+
