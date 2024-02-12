@@ -1,5 +1,7 @@
 [core]
-    remote = myremote
+    remote = origin
 ['remote "myremote"']
     url = gdrive://1J9wW-6-wP8y47SOxPhcq4Nvm3E8D9dCa
     gdrive_acknowledge_abuse = true
+['remote "origin"']
+    url = https://github.com/Vanmo4/mlops_2.git
